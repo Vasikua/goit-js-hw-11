@@ -22,7 +22,9 @@ export function getImages(QUERY) {
                     message: ("Sorry, there are no images matching your search query. Please try again!")
                 });
             }
+            loader.style.display = 'none';
             return data;
+            
         }).catch(error => {
             console.log(error);
         })

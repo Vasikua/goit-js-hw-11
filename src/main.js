@@ -28,13 +28,11 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
     gallery.innerHTML = "";
     const QUERY = event.target.elements.serchfield.value.trim();
-    if (QUERY.length === 0) {
-        return iziToast.error({
-                message: ("Fill in the search fild")
-               });      
+    if (QUERY.length > 0) {
+       
+        getImages(QUERY).then((data) => renderData(data));
+        form.reset();
     }
-    getImages(QUERY).then((data) => renderData(data) )
-    form.reset();
 });
 
   

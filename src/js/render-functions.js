@@ -35,5 +35,6 @@ export function renderData(data) {
        }).join('');
         
         gallery.innerHTML = arrayOfImg;
-        lightbox.refresh('https://github.com/andreknieriem/simplelightbox#public-methods');
+    lightbox.refresh('https://github.com/andreknieriem/simplelightbox#public-methods');
+      
 };
